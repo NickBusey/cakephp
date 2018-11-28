@@ -836,8 +836,8 @@ class BelongsToMany extends Association
             $targetKeys = array_combine($assocForeignKey, $e->extract($targetPrimaryKey));
 
             $changedKeys = (
-                $sourceKeys !== $joint->extract($foreignKey) ||
-                $targetKeys !== $joint->extract($assocForeignKey)
+                $sourceKeys != $joint->extract($foreignKey) ||
+                $targetKeys != $joint->extract($assocForeignKey)
             );
             // Keys were changed, the junction table record _could_ be
             // new. By clearing the primary key values, and marking the entity
